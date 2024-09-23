@@ -15,14 +15,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+   
 }
 body{
     font-size: var(--font-size);
     font-family: "Roboto", sans-serif;
     padding-top: 55px;
+     background-color: var(--background-light);
 }
 
-
+@import "partials/recipe-section.scss";
 .btn{
     border: none;
     outline: none;
@@ -39,6 +41,56 @@ body{
         box-shadow: 0 1px 3px var(--shadow-color);
     }
 }
+.options-container{
+    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1em;
+    border-radius: 5px;
+    border-left: .5em solid var(--primary-color);
+    background-color: var(--background-light);
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+    .option{
+        height: 3.5em;
+        width: 3.5em;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.light{
+            background-color: #fff;
+        }
+        &.dark{
+            background-color: rgb(29, 29, 29);
+        }
+        .check{
+            height: 2.5em;
+            width: 2.5em;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px var(--shadow-color);
+            svg{
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    .btn span{
+        display: inline-block;
+        margin-left: .5em;
+    }
+}
+.d-block h2{
+    font-size: 1.75em;
+    color: var(--text-color)
+}
+@import "partials/previous-searches.scss";
 .custom-image{
     background-color: red;
     height: 0;
