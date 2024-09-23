@@ -1,8 +1,7 @@
 .section.improve-skills{
     display: flex;
-    align-items: stretch;
+    align-items: center;
     .col{
-        flex: 1;
         &.img{
             img{
                 width: 100%;
@@ -10,9 +9,6 @@
         }
         &.typography{
             padding-left: 1em;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
             .skill-item{
                 border-left: .3em solid var(--primary-color);
                 margin-bottom: .5em;

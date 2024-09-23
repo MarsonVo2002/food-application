@@ -1,19 +1,24 @@
 // import logo from './logo.svg';
 // import './App.css';
-import HeroSection from "./components/hero_section";
-import ImproveSkill from "./components/improve_skill";
 import Navbar from "./components/navbar";
-import QuoteSection from "./components/quote_section";
+import Footer from "./components/footer";
+import Home from "./pages/home";
+import Recipes from "./pages/recipes";
+import Settings from "./pages/setting";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar></Navbar>
       <div className="container main">
-        <HeroSection></HeroSection>
-        <ImproveSkill></ImproveSkill>
-        <QuoteSection></QuoteSection>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/recipes" element={<Recipes></Recipes>}></Route>
+          <Route path="/settings" element={<Settings></Settings>}></Route>
+        </Routes>
       </div>
-    </div>
+      <Footer></Footer>
+    </Router>
   );
 }
 
